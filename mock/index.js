@@ -3,7 +3,7 @@ import { appendFile, unlink } from 'fs';
 (function createDataBase() {
   const bigArray = [];
 
-  for (let index = 0; index < 1_000_000; index++) {
+  for (let index = 0; index < 500_000; index++) {
     const id = index;
     const newObject = {
       id: id,
@@ -15,7 +15,7 @@ import { appendFile, unlink } from 'fs';
     bigArray.push(newObject);
   }
 
-  unlink('mock/dataBase.json', err => {
+  unlink('public/mock/dataBase.json', err => {
     if (err && err.code === 'ENOENT') {
       console.info("File dataBase.json doesn't exist.");
     } else if (err) {
@@ -25,7 +25,7 @@ import { appendFile, unlink } from 'fs';
     }
   });
 
-  appendFile('mock/dataBase.json', JSON.stringify(bigArray), err => {
+  appendFile('public/mock/dataBase.json', JSON.stringify(bigArray), err => {
     if (err) throw err;
     console.log('New file dataBase.json has been created.');
   });

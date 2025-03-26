@@ -3,7 +3,7 @@ import { appendFile, unlink } from 'fs';
 (function createDataBase() {
   const bigArray = [];
 
-  for (let index = 0; index < 500_000; index++) {
+  for (let index = 0; index < 1_000_000; index++) {
     const id = index;
     const newObject = {
       id: id,

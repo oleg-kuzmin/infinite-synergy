@@ -1,0 +1,13 @@
+@use '@/shared/mixins' as *;
+
+.HomePage {
+  &__Content {
+    display: none;
+    @include media-laptop {
+      display: flex;
+      max-height: 100vh;
+      padding-top: 50px;
+      gap: 5px;
+    }
+  }
+}

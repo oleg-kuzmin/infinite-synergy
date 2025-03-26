@@ -1,0 +1,12 @@
+@use './mixinsMedia' as *;
+
+@mixin content {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  @include media-laptop {
+    width: calc(100% - 64px);
+  }
+  @include media-desktop {
+    width: calc(100% - 224px);
+  }
+}

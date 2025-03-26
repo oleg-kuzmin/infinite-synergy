@@ -1,0 +1,51 @@
+@use '@/shared/mixins' as *;
+
+.ElementUser {
+  &__Button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+    gap: 10px;
+    cursor: pointer;
+    @include effect-focus;
+    @include effect-hover-ElementUserButton;
+    &:hover {
+      .ElementUser__EditPen {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__Icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('/svg/user-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__EditPen {
+    position: absolute;
+    right: 10px;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('/svg/user-edit-pen-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+  }
+
+  &__Text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include font-regular(16px, 120%);
+  }
+}

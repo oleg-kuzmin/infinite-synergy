@@ -1,0 +1,23 @@
+@mixin effect-focus {
+  &:focus-visible {
+    border-radius: 4px;
+    outline-color: #99d5ff;
+  }
+}
+
+@mixin effect-hover {
+  @media screen and (hover: hover) {
+    transition: background-color var(--time-hover);
+    &:hover {
+      background-color: var(--dark-blue);
+    }
+  }
+}
+
+@mixin effect-hover-ElementUserButton {
+  @media screen and (hover: hover) {
+    &:hover {
+      background-color: var(--dark-blue);
+    }
+  }
+}

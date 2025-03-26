@@ -6,7 +6,7 @@ import { defineConfig } from 'vite';
 const packageRoot = packageDirectorySync() ?? '';
 
 export default defineConfig({
-  base: '/',
+  base: '/infinite-synergy/',
   plugins: [react()],
   server: {
     open: true,
